@@ -1,44 +1,48 @@
-# AiogramGPT
+# AIOChatGPT
 
-## Описание проекта
+## Project Description
 
-**AiogramGPT** — это телеграм-бот, предназначенный для взаимодействия пользователей с различными задачами искусственного интеллекта. Бот предоставляет интуитивно понятный интерфейс для общения, работы с кодом и анализа изображений, адаптируясь под запросы каждого пользователя.
+**AIOChatGPT** is a Telegram bot designed to assist users with various AI-powered tasks. The bot provides an intuitive interface for communication, coding, and image analysis, adapting to each user's needs.
 
-### Основные функции:
+### Key Features:
 
-1. **Режим общения (ChatGPT):**  
-   Бот отвечает на вопросы, поддерживает диалог и помогает решать повседневные задачи.
-2. **Режим программирования (Coder):**  
-   Специализирован для работы с кодом: исправляет, оптимизирует или генерирует код. Если пользователь вводит некорректный запрос, бот напоминает о форматировании для Telegram.
-3. **Режим анализа изображений (Vision):**  
-   Бот обрабатывает изображения, анализируя их содержимое.  
-   _Важно:_ работа с изображениями может занимать больше времени, чем текстовые запросы и в целом нестабильна.
+1. **Chat Mode (ChatGPT):**  
+   The bot answers questions, engages in conversations, and helps with everyday tasks.
 
-### Особенности:
+2. **Coding Mode (Coder):**  
+   Specialized for coding tasks: fixes, optimizes, or generates code. If the user enters an unformatted request, the bot reminds them about proper formatting for Telegram.
 
-- Модель Vision может долго генерировать ответ в случае запуска модели на cpu или на не производительном gpu.
-- Ответы бота переводятся на английский в связи с тем, что llama3.1 плохо работает с русским языком.
-- Все данные о пользователях хрянятся в бинарном файле (планируется загружать в redis или MongoDB).
+3. **Image Analysis Mode (Vision):**  
+   The bot processes and analyzes image content.  
+   _Note:_ Image-related tasks may take longer than text queries and are generally less stable.
 
-## Задачи и сложности
+### Highlights:
 
-1. **Переключение между режимами:**  
-   Пользователи часто запрашивают задачи, которые не относятся к текущему режиму. Бот решает эту проблему, предлагая переключиться на соответствующий режим.
-2. **Оптимизация ответов:**  
-   Ответы автоматически сокращаются до самой важной информации, чтобы экономить время пользователей и ресурсы системы.
-3. **Международное использование:**  
-   В переводчике можно сменить язык на любуй другой с помощью команды /set_language (по умолчанию 'русский').
+- The Vision model may generate responses slowly when running on a CPU or low-performance GPU.
+- Responses are translated into English because **llama3.1** performs poorly with Russian.
+- User data is stored in a binary file (future plans include migrating to Redis or MongoDB).
 
-## Команды бота
+## Challenges and Solutions
 
-- **/start** — начать работу.
-- **/set_mode** — выбрать режим: ChatGPT, Coder, или Vision.
-- **/reset_history** — очистить историю сообщений.
-- **/change_model** — переключиться на другую модель.
-- **/clear_all_user_data** — очистить данные всех пользователей (только для администраторов).
-- **/clear_all_images** — очистить все фотографии в папке '/photos' (только для администраторов).
-- **/set_language** — выбрать язык для общения.
+1. **Mode Switching:**  
+   Users often request tasks unrelated to the current mode. The bot solves this by suggesting switching to the appropriate mode.
 
-## Об авторе
+2. **Optimized Responses:**  
+   Answers are automatically condensed to provide only the most relevant information, saving users' time and system resources.
 
-#### Очаровательный, харизматичный, неотразимый, загадочный, утончённый, стильный, страстный, обаятельный, уверенный
+3. **International Usage:**  
+   Users can change the response language using the `/set_language` command (default is Russian).
+
+## Bot Commands
+
+- **/start** — Start using the bot.
+- **/set_mode** — Select a mode: ChatGPT, Coder, or Vision.
+- **/reset_history** — Clear the conversation history.
+- **/change_model** — Switch to another model.
+- **/clear_all_user_data** — Clear all user data (admin-only).
+- **/clear_all_images** — Clear all photos in the `/photos` folder (admin-only).
+- **/set_language** — Choose the communication language.
+
+## About the Author
+
+#### Charming, charismatic, irresistible, enigmatic, sophisticated, stylish, passionate, captivating, confident.

@@ -5,3 +5,4 @@ photos/
 state_data.pkl
 log.py
 test.py
+.gitignore
