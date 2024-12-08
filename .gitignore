@@ -1,0 +1,7 @@
+myenv/
+__pycache__/
+.env
+photos/
+state_data.pkl
+log.py
+test.py
